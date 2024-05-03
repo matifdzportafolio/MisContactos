@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Alta</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...">
+  <link rel="stylesheet" href="css/nuevo.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navcss">
+  <a class="navbar-brand"  href="/">
+    <i class="fas fa-briefcase"></i> Mis Contactos
+  </a>
+  <div class="navbar-nav ml-auto">
+    <a class="navbar-brand"  href="/perfil">
+      <i class="fas fa-briefcase"></i> Mi Perfil
+    </a>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="titulo-recuadro mb-3 mt-4">
+        <h2 class="text-dark text-center">Nueva categoria</h2>
+      </div>
+      <form method=POST action="/nueva_categoria" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="nombre" class="text-white">Nombre</label>
+          <input type="text" th:value="${nombrecategoria}" name="nombrecategoria" class="form-control" id="nombre" placeholder="Ingrese el nombre de la categoria nueva:" required>
+        </div>
+        <div class="text-center text-black mt-3">
+          <button type="submit" class="btn btn-primary btn-lg ">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

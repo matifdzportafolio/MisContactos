@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/registro.css" />
+</head>
+
+<body>
+
+<div class="container">
+    <div class="register-box">
+        <form method="POST" action="/registro" enctype="multipart/form-data">
+            <h2>Registro</h2>
+            <div class="input-box">
+                <span class="icon"><i class="fas fa-id-card"></i></span>
+                <input type="text" th:value="${nombre}" name="nombre" class="form-control" placeholder="Nombre" required/>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fas fa-id-card"></i></span>
+                <input type="text" th:value="${apellido}" name="apellido" class="form-control" placeholder="Apellido" required/>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-user"></i></span>
+                <input type="text" th:value="${nombreuser}"  name="nombreuser" class="form-control" placeholder="Usuario" required/>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" th:value="${contrasenia}"  name="contrasenia" class="form-control" placeholder="Contraseña" required/>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" th:value="${email}"  name="email" class="form-control" placeholder="Correo electrónico" required/>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                <input type="tel" th:value="${celular}"  name="celular" class="form-control" placeholder="Número de celular" required/>
+            </div>
+            <button type="submit">Registrarse</button>
+            <div class="login-link">
+                <a href="/login">¿Ya tienes una cuenta? Inicia sesión aquí</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+
+</html>

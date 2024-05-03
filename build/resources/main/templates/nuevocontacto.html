@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Alta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...">
+    <link rel="stylesheet" href="css/nuevo.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navcss">
+    <a class="navbar-brand"  href="/">
+        <i class="fas fa-briefcase"></i> Mis Contactos
+    </a>
+    <div class="navbar-nav ml-auto">
+        <a class="navbar-brand"  href="/perfil">
+            <i class="fas fa-briefcase"></i> Mi Perfil
+        </a>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="titulo-recuadro mb-3 mt-4">
+                <h2 class="text-dark text-center">Nuevo contacto</h2>
+            </div>
+            <form method=POST action="/nuevo_contacto" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nombre" class="text-white">Nombre</label>
+                    <input type="text" th:value="${nombrecontacto}" name="nombrecontacto" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido" class="text-white">Apellido</label>
+                    <input type="text" th:value="${apellidocontacto}" name="apellidocontacto" class="form-control" id="apellido" placeholder="Ingrese su apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono" class="text-white">Teléfono</label>
+                    <input type="number" th:value="${telcontacto}" name="telcontacto" class="form-control" id="telefono" placeholder="Ingrese su teléfono" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="text-white">Email</label>
+                    <input type="email" th:value="${emailcontacto}" name="emailcontacto" class="form-control" id="email" placeholder="Ingrese su email" required>
+                </div>
+                <div class="form-row align-items-end">
+                    <div class="form-group col">
+                        <label for="fechaNacimiento" class="text-white">Fecha de Nacimiento</label>
+                        <input type="date" th:value="${fechacontacto}" name="fechacontacto" class="form-control" id="fechaNacimiento" required min="1910-01-01" max="2190-01-01">
+                    </div>
+                    <div class="form-group col">
+                        <label for="categoria" class="text-white">Categoría</label>
+                        <select class="form-control" id="categoria" name="categoria" required>
+                            <option th:each="categoria : ${categorias}" th:value="${categoria.id}" th:text="${categoria.nombre} "></option>
+                        </select>
+                    </div>
+                    <div class="form-group col-auto">
+                        <div class="d-flex">
+                            <button type="button" class="btn btn-primary align-self-center" onclick="window.location.href='/nueva_categoria'" id="agregarCategoria"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center text-black mt-3">
+                    <button type="submit" class="btn btn-primary btn-lg ">Agendar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

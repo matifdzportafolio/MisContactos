@@ -1,0 +1,90 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #043b5e
+}
+
+.card{
+    background-color: transparent;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.card-body{
+    background-color: #fae98c;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.cardtrans {
+    background-color: transparent;
+}
+
+
+.texto-card {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.footer-css{
+    background-color: #000000b8;
+}
+
+.fixed-size-image{
+    width: 110px; /* Ancho deseado */
+    height: 110px; /* Altura deseada */
+    object-fit: cover; /* Para mantener la proporción de la imagen y recortarla si es necesario */
+}
+
+.navcss{
+    background-color: #0B2C4D;
+}
+
+.btn-css{
+    background-color: #fae98c;
+    color: #fae98c;
+}
+
+.btn-css:hover{
+    background-color: #e5874d;
+    color: #8cfae0;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.table tbody tr {
+    background-color: white !important;
+}
+
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rounded-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+}
+
+.large-text {
+    font-size: 1.5rem;
+}
+

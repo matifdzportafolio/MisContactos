@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...">
+    <link rel="stylesheet" href="css/menu.css">
+    <title>Title</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navcss">
+    <a class="navbar-brand"  href="/">
+        <i class="fas fa-briefcase"></i> Mis Contactos
+    </a>
+    <div class="navbar-nav ml-auto">
+        <a class="navbar-brand"  href="/perfil">
+            <i class="fas fa-briefcase"></i> Mi Perfil
+        </a>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-xl mb-5">
+            <div class="card">
+                <div class="card-body text-center">
+                    <p class="mx-auto display-4">¡Hola, <span th:text="${usuario.nombre}"></span>!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Primera fila -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <a href="/contactos" class="card-body btn btn-css">
+                    <div class="imagen1">
+                        <img src="img/cliente.png" class="fixed-size-image">
+                    </div>
+                    <div class="texto-card">
+                        <h3 class="card-title text-dark ml-3">Listado de contactos</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <a href="/nuevo_contacto" class="card-body btn btn-css">
+                    <div class="imagen1">
+                        <img src="img/anadir-amigo.png" class="fixed-size-image">
+                    </div>
+                    <div class="texto-card">
+                        <h3 class="card-title text-dark ml-5">Nuevo contacto</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #043b5e
+}
+
+.card{
+    background-color: transparent;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.card-body{
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.cardtrans {
+    background-color: transparent;
+}
+
+
+.texto-card {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.footer-css{
+    background-color: #000000b8;
+}
+
+.fixed-size-image{
+    width: 110px; /* Ancho deseado */
+    height: 110px; /* Altura deseada */
+    object-fit: cover; /* Para mantener la proporción de la imagen y recortarla si es necesario */
+}
+
+.navcss{
+    background-color: #0B2C4D;
+}
+
+.btn-css{
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-css:hover{
+    background-color: #9cd3c5;
+    color: #9cd3c5;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.row{
+    padding-top: 25px;
+}
+
+.profile-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.fa-user-circle {
+    font-size: 7em;
+}
+.num-contactos {
+    font-size: 1.5em;
+}
